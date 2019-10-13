@@ -4,13 +4,11 @@ const Calculator = () => {
     const [total, setTotal] = useState(0);
     const [inputNum, setInputNum] = useState('');
     const textRef = React.createRef();
-    const onChangeHandler = (e) => {
-        setInputNum(e.currentTarget.value);
-    };
-    const plus = () => run(total + Number(inputNum));
-    const minus = () => run(total - Number(inputNum));
-    const run = (total) => {
-        setTotal(total);
+    const onChangeHandler = (e) => setInputNum(e.currentTarget.value);
+    const plus = () => run(() => total + Number(inputNum));
+    const minus = () => run(() => total - Number(inputNum));
+    const run = (cb) => {
+        setTotal(cb());
         setInputNum('');
         textRef.current.focus();
     };
