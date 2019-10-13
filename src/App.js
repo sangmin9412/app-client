@@ -18,6 +18,7 @@
 import React from 'react';
 import Counter from "./study/Counter";
 import InputMirror from "./study/InputMirror";
+import Calculator from "./study/Calculator";
 
 function App() {
     return (
@@ -25,6 +26,8 @@ function App() {
             <Counter />
             <hr />
             <InputMirror />
+            <hr />
+            <Calculator />
         </div>
     )
 }

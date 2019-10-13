@@ -1,16 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const InputMirror = () => {
-    const text = 'abcd';
-    const onChangeHandler = (e) => {
-        console.log(e.currentTarget.value);
-    };
+    const [text, setText] = useState('');
+    const onChangeHandler = (e) => setText(e.currentTarget.value);
     return (
         <div>
             <input type={'text'}
                    onChange={onChangeHandler}
                    value={text} />
-            <div>{text}</div>
+            <span>{text.length}</span>
+            <div>{text.toUpperCase()}</div>
         </div>
     );
 };
