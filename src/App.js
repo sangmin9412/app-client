@@ -16,14 +16,15 @@
 // }
 //
 import React from 'react';
-import Button from "./components/Button/Button";
+import Counter from "./study/Counter";
+import InputMirror from "./study/InputMirror";
 
 function App() {
     return (
         <div>
-            <Button type={'primary'}>111</Button>
-            <Button type={'warning'}>22</Button>
-            <Button>33</Button>
+            <Counter />
+            <hr />
+            <InputMirror />
         </div>
     )
 }
