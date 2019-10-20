@@ -20,17 +20,37 @@ import Counter from "./study/Counter";
 import InputMirror from "./study/InputMirror";
 import Calculator from "./study/Calculator";
 import ListTest from "./study/ListTest";
+import Tabs from "./components/Tabs/Tabs";
 
 function App() {
+    const list = [
+        {title: '리빙', color: 'green'},
+        {title: '푸드', color: 'orange'},
+        {title: '스포츠', color: 'blue'},
+        {title: '자동차', color: 'darkgreen'},
+        {title: '패션뷰티', color: 'pink'}
+    ];
+    const list2 = [
+        {title: '하하하하', color: 'green'},
+        {title: 'ㅋㅋㅋㅋㅋ', color: 'orange'}
+    ];
     return (
         <div>
-            <Counter />
-            <hr />
-            <InputMirror />
-            <hr />
-            <Calculator />
-            <hr />
-            <ListTest />
+            <Tabs list={list}>
+                <div>1111</div>
+                <div>2222</div>
+                <div>3333</div>
+                <div>4444</div>
+                <div>5555</div>
+            </Tabs>
+            <Tabs list={list2} />
+            {/*<Counter />*/}
+            {/*<hr />*/}
+            {/*<InputMirror />*/}
+            {/*<hr />*/}
+            {/*<Calculator />*/}
+            {/*<hr />*/}
+            {/*<ListTest />*/}
         </div>
     )
 }
