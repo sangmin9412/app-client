@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 const Tabs = (props) => {
-    console.log(props);
     const [activeIndex, setActiveIndex] = useState(0);
     const getColor = (index, item) =>  activeIndex === index ? item.color : 'black';
     const getOnClickHandler = (index) => {
@@ -24,6 +23,8 @@ const Tabs = (props) => {
         }
         setActiveIndex(index);
     };
+
+    if (!props.list.length) return <span>...로딩중</span>;
 
     return (
         <div>
