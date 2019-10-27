@@ -1,4 +1,3 @@
-import 'regenerator-runtime';
 import {get} from "../module/http";
 
 const apiUrl = 'https://wow9144.github.io';
